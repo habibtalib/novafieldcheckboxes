@@ -48,7 +48,7 @@ export default {
         toggleOption(option) {
             var vm = this;
             if (this.isChecked(option)) {
-                this.value.filter(item => item != option)
+                this.value = this.value.filter(item => item != option)
 
                 return
             }
