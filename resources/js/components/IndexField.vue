@@ -24,7 +24,7 @@ export default {
         optionStyle(option) {
             const color  = this.field.value && this.field.value.includes(option) ? 'green' : 'red'
             return {
-                'background': `rgba(var(--colors-${color}-500),var(--tw-text-opacity))`
+                'background': `${color}`
             }
         },
     },
