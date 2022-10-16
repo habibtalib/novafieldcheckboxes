@@ -32,7 +32,8 @@
 </template>
 
 <script>
-import { FormField, HandlesValidationErrors } from 'laravel-nova'
+import HandlesValidationErrors from '../mixins/HandlesValidationErrors'
+import FormField from '../mixins/FormField'
 
 export default {
     mixins: [FormField, HandlesValidationErrors],
@@ -45,8 +46,9 @@ export default {
         },
 
         toggleOption(option) {
+            var vm = this;
             if (this.isChecked(option)) {
-                this.$set(this, 'value', this.value.filter(item => item != option))
+                vm.$set(this, 'value', this.value.filter(item => item != option))
 
                 return
             }
